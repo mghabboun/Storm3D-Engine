@@ -1,0 +1,3 @@
+<Material name="diffuseColorMat">
+	<Shader source="E:/projects/Storm3DEngine/EngineDefaults/Shaders/diffuseColor.xml"/>
+</Material>

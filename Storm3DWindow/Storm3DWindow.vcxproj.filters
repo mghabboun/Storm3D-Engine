@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Storm3DSDLWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Storm3DWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Storm3DSDLWindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Storm3DWindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{826e46a5-a199-4314-a3b2-5848120bebf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{ad751949-ecfc-4bf9-a8aa-1020ca6b07ac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

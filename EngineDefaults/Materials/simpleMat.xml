@@ -1,0 +1,4 @@
+<Material name="simple">
+	<Shader source="E:/projects/Storm3DEngine/EngineDefaults/Shaders/simple.xml"/>
+	<ShaderFlag name=""/>
+</Material>

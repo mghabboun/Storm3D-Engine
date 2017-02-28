@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FPSCamera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Material.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MaterialManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MaterialParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MeshManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Node.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextureManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PointLight.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ObjReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ShaderManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StormEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XMLParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\tinyxml2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Timer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\EngineUniforms.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\FrameBufferObject.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\HardwareBuffer.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\ObjectRenderer.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\RenderDevice.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\Renderer.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\RenderTarget.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\Shader.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\Texture.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\Uniform.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\UniformFactory.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\UniformTypes.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Storm3DRendering\src\VertexStream.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FullScreenQuad.cpp">
+      <Filter>src\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubMesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Camera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Component.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FPSCamera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameObject.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Geometry.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Material.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MaterialManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Mesh.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MeshManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MeshReader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MeshSplitter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Node.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObjReader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PointLight.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RayCaster.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RefCounter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Timer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StormEngine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TextureManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SceneManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ShaderManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SmartPtr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Storm3DTypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XMLParser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="external\tinyxml2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Triangle.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Terrain.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UniformGrid.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OctreeNode.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OctreeBuilder.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TerrainGenerator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ImageLoader.h">
+      <Filter>include\ResourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Octree.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Collider.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OctreeEntry.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OctreeMeshBuilder.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OctreeInserter.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OctreeTraversal.h">
+      <Filter>include\SpatialPartitioning</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FileManager.h">
+      <Filter>include\ResourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Handle.h">
+      <Filter>include\ResourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MaterialParser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ResourceManager.h">
+      <Filter>include\ResourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ResourceLoader.h">
+      <Filter>include\ResourceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\BufferObject.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\DrawAttribs.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\EngineUniforms.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\FrameBufferObject.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\GPUProgram.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\HardwareBuffer.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\HardwareBufferPool.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\LineRenderer.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\ObjectRenderer.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\OpenGL.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\RenderDevice.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\Renderer.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\RenderTarget.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\Shader.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\Texture.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\Uniform.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\UniformFactory.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\UniformTypes.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\src\VertexBufferGPURenderer.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Storm3DRendering\include\VertexStream.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FullScreenQuad.h">
+      <Filter>include\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SubMesh.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Image.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DiffuseMaterial.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c5aa13fc-5cc8-4e0d-81fd-a90b5c8d78cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{1cda0d9d-85aa-4d3c-a7ff-a37900332438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\SpatialPartitioning">
+      <UniqueIdentifier>{26944554-3724-4387-a3b8-8e3331f05f64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ResourceManagement">
+      <UniqueIdentifier>{e05b9fb9-9d93-4970-a4d3-b9a1b5cb210a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Rendering">
+      <UniqueIdentifier>{841127da-751e-4d21-8684-f555a6edac30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Rendering">
+      <UniqueIdentifier>{90e73a63-1e0b-4bb5-a310-6f9d79202847}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

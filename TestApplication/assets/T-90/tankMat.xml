@@ -1,0 +1,7 @@
+<Material name="tankMat">
+	<Shader source="E:/projects/3DAppWorld/Engine/Shaders/diffuseShader.xml"/>
+	<ShaderFlag name="_F03_ParallaxMapping"/>
+	
+	<Sampler name="normalMap" source="E:/projects/3DAppWorld/TestApplication/assets/T-90/MainBody.png" />
+	<Sampler name="albedoMap" source="E:/projects/3DAppWorld/Engine/Models/DownNecker/DownNecker/done2NM.png" allowCompression="false" />
+</Material>

@@ -1,0 +1,8 @@
+<Material name="rocksMat">
+	<Shader source="E:/projects/3DAppWorld/Engine/Shaders/diffuseBump.xml"/>
+	<ShaderFlag name="_F03_ParallaxMapping"/>
+	
+	<Sampler name="normalMap" source="E:/projects/3DAppWorld/TestApplication/assets/rocks/rocksDiffuse.tga" />
+	<Sampler name="normalMap" source="E:/projects/3DAppWorld/TestApplication/assets/rocks/rocksNormal.tga" />
+	
+</Material>

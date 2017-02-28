@@ -1,0 +1,67 @@
+<Shader name="diffuseBump">
+<VertexShader>
+#version 330
+
+uniform mat4 viewMatrix, projMatrix;
+uniform mat3 normalMatrix;
+ 
+uniform vec3 lightPos;
+uniform vec4 lightDir;
+uniform vec4 lightColor;
+ 
+in vec3 Position;
+in vec3 Normal;
+in vec4 Tangent;
+in vec2 TexCoord1;
+//in vec3 bitangent;
+smooth out vec3 varyingNormal;
+smooth out vec2 varyingTexCoord1;
+smooth out vec3 outlightDir; 
+ 
+void main()
+{
+	varyingTexCoord1 = TexCoord1;
+
+	//Construct a 3x3 matrix from the geometry’s inverse tangent, binormal, and normal
+	vec3 biTangent = cross(Tangent.xyz, Normal) * Tangent.w;
+	mat3 tbn = mat3( Tangent.xyz, biTangent, Normal);
+	
+	//mat3 rotmat = mat3(Tangent, biTangent, Normal);
+	varyingNormal = inverse(tbn) * Normal;
+	mat3 inverseView = mat3(inverse (viewMatrix));
+	outlightDir = tbn * ( inverseView * lightPos - Position);
+	
+    gl_Position = projMatrix * viewMatrix * vec4(Position,1);
+}
+</VertexShader>
+
+<FragmentShader>
+#version 330
+
+out vec4 outputF;
+
+uniform vec3 baseColor;
+uniform sampler2D colorMap;
+uniform sampler2D bumpMap;
+
+smooth in vec3 varyingNormal;
+smooth in vec2 varyingTexCoord1;
+
+smooth in vec3 outlightDir;
+
+void main(void)
+{
+	vec4 n = ( texture(colorMap, varyingTexCoord1)  * 2.0) - vec4(1.0);
+	// Dot product gives us diffuse intensity
+	vec3 bumpNormal = n.xyz;
+	vec3 lightDir =  normalize(outlightDir);
+	float diff = clamp( dot(bumpNormal, lightDir), 0.0, 1.0 ) ;
+	//diff = 1.0;
+	// Multiply intensity by diffuse color, force alpha to 1.0
+	outputF =  vec4(diff * baseColor, 1);
+		
+	outputF *= texture(bumpMap , varyingTexCoord1);
+	
+}
+</FragmentShader>
+</Shader>

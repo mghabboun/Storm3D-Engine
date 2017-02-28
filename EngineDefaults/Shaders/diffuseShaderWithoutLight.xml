@@ -1,0 +1,54 @@
+<Shader name="diffuse">
+<VertexShader>
+#version 330
+
+uniform mat4 viewMatrix, projMatrix;
+
+ 
+in vec3 Position;
+in vec3 Normal;
+in vec2 TexCoord1;
+ 
+smooth out vec3 varyingNormal;
+smooth out vec2 varyingTexCoord1;
+ 
+void main()
+{	
+	varyingTexCoord1 = TexCoord1;
+	mat3 normalMatrix = mat3(viewMatrix);
+	varyingNormal = normalMatrix * Normal;
+    gl_Position = projMatrix * viewMatrix * vec4(Position,1);
+}
+</VertexShader>
+
+<FragmentShader>
+#version 330
+
+out vec4 outputF;
+
+uniform vec3 baseColor;
+uniform sampler2D colorMap;
+uniform sampler2D bumpMap;
+
+smooth in vec3 varyingNormal;
+smooth in vec2 varyingTexCoord1;
+
+void main(void)
+{
+	// Dot product gives us diffuse intensity
+	//float diff = max(0.0, dot(normalize(varyingNormal), ) );
+	float diff = 1.0;
+	// Multiply intensity by diffuse color, force alpha to 1.0
+	outputF =  vec4(diff * baseColor, 1) + 0.2;
+	//outputF = vec4(varyingNormal,1);
+	//* texture(bumpMap , varyingTexCoord1)
+	outputF *= texture(colorMap , varyingTexCoord1)*outputF;
+	//outputF = 1.0f;
+	//outputF = vec4(baseColor, 1); 
+	// Modulate in the texture
+	
+	//outputF *= texture(colorMap, varyingTexCoord1);
+	//outputF *= texture(colorMap, varyingTexCoord1);
+}
+</FragmentShader>
+</Shader>

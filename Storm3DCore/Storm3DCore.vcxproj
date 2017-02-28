@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Android">
+      <Configuration>Release</Configuration>
+      <Platform>Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B5269D8-BBCE-4196-BA82-CF931AE94F81}</ProjectGuid>
+    <RootNamespace>My3DAppWorldCore</RootNamespace>
+    <ProjectName>Storm3DCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Android'">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(EXTERNAL)\DevIL-SDK-x86-1.7.8\include\;$(EXTERNAL)\bullet-2.81-rev2613\src;$(EXTERNAL);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(EXTERNAL)\DevIL-SDK-x86-1.7.8\lib;$(EXTERNAL)\glew\lib\Release\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DevIL.lib;ILU.lib;ILUT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(EXTERNAL)\DevIL-SDK-x86-1.7.8\include\;$(EXTERNAL)\bullet-2.81-rev2613\src;$(EXTERNAL);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(EXTERNAL)\DevIL-SDK-x64-1.7.8\lib;$(EXTERNAL)\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DevIL.lib;ILU.lib;ILUT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(EXTERNAL)\DevIL-SDK-x86-1.7.8\include\;$(SolutionDir)\external\bullet-2.81-rev2613\src;$(EXTERNAL);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>DevIL.lib;ILU.lib;ILUT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(EXTERNAL)\DevIL-SDK-x86-1.7.8\lib;$(EXTERNAL)\glew\lib\Release\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(EXTERNAL)\DevIL-SDK-x86-1.7.8\include\;$(SolutionDir)\external\bullet-2.81-rev2613\src;$(EXTERNAL);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>DevIL.lib;ILU.lib;ILUT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(EXTERNAL)\DevIL-SDK-x64-1.7.8\lib;$(EXTERNAL)\glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Android'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\3DAppWorldCore\include;..\3DAppWorldMath\include</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Android'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\3DAppWorldCore\include;..\3DAppWorldMath\include</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Storm3DRendering\include\BufferObject.h" />
+    <ClInclude Include="..\Storm3DRendering\include\DrawAttribs.h" />
+    <ClInclude Include="..\Storm3DRendering\include\EngineUniforms.h" />
+    <ClInclude Include="..\Storm3DRendering\include\FrameBufferObject.h" />
+    <ClInclude Include="..\Storm3DRendering\include\GPUProgram.h" />
+    <ClInclude Include="..\Storm3DRendering\include\HardwareBuffer.h" />
+    <ClInclude Include="..\Storm3DRendering\include\HardwareBufferPool.h" />
+    <ClInclude Include="..\Storm3DRendering\include\LineRenderer.h" />
+    <ClInclude Include="..\Storm3DRendering\include\ObjectRenderer.h" />
+    <ClInclude Include="..\Storm3DRendering\include\OpenGL.h" />
+    <ClInclude Include="..\Storm3DRendering\include\RenderDevice.h" />
+    <ClInclude Include="..\Storm3DRendering\include\Renderer.h" />
+    <ClInclude Include="..\Storm3DRendering\include\RenderTarget.h" />
+    <ClInclude Include="..\Storm3DRendering\include\Shader.h" />
+    <ClInclude Include="..\Storm3DRendering\include\Texture.h" />
+    <ClInclude Include="..\Storm3DRendering\include\Uniform.h" />
+    <ClInclude Include="..\Storm3DRendering\include\UniformFactory.h" />
+    <ClInclude Include="..\Storm3DRendering\include\UniformTypes.h" />
+    <ClInclude Include="..\Storm3DRendering\include\VertexStream.h" />
+    <ClInclude Include="..\Storm3DRendering\src\VertexBufferGPURenderer.h" />
+    <ClInclude Include="external\tinyxml2.h" />
+    <ClInclude Include="include\Collider.h" />
+    <ClInclude Include="include\DiffuseMaterial.h" />
+    <ClInclude Include="include\FileManager.h" />
+    <ClInclude Include="include\FullScreenQuad.h" />
+    <ClInclude Include="include\Image.h" />
+    <ClInclude Include="include\ImageLoader.h" />
+    <ClInclude Include="include\MeshReader.h" />
+    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\MeshSplitter.h" />
+    <ClInclude Include="include\ObjReader.h" />
+    <ClInclude Include="include\FPSCamera.h" />
+    <ClInclude Include="include\MaterialManager.h" />
+    <ClInclude Include="include\Mesh.h" />
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Octree.h" />
+    <ClInclude Include="include\OctreeBuilder.h" />
+    <ClInclude Include="include\OctreeEntry.h" />
+    <ClInclude Include="include\OctreeInserter.h" />
+    <ClInclude Include="include\OctreeMeshBuilder.h" />
+    <ClInclude Include="include\OctreeNode.h" />
+    <ClInclude Include="include\OctreeTraversal.h" />
+    <ClInclude Include="include\PointLight.h" />
+    <ClInclude Include="include\RayCaster.h" />
+    <ClInclude Include="include\ResourceLoader.h" />
+    <ClInclude Include="include\SubMesh.h" />
+    <ClInclude Include="include\Terrain.h" />
+    <ClInclude Include="include\TerrainGenerator.h" />
+    <ClInclude Include="include\Timer.h" />
+    <ClInclude Include="include\Storm3DTypes.h" />
+    <ClInclude Include="include\Component.h" />
+    <ClInclude Include="include\StormEngine.h" />
+    <ClInclude Include="include\Geometry.h" />
+    <ClInclude Include="include\Material.h" />
+    <ClInclude Include="include\MeshManager.h" />
+    <ClInclude Include="include\Node.h" />
+    <ClInclude Include="include\RefCounter.h" />
+    <ClInclude Include="include\SceneManager.h" />
+    <ClInclude Include="include\SmartPtr.h" />
+    <ClInclude Include="include\Handle.h" />
+    <ClInclude Include="include\ResourceManager.h" />
+    <ClInclude Include="include\TextureManager.h" />
+    <ClInclude Include="include\MaterialParser.h" />
+    <ClInclude Include="include\ShaderManager.h" />
+    <ClInclude Include="include\Triangle.h" />
+    <ClInclude Include="include\UniformGrid.h" />
+    <ClInclude Include="include\XMLParser.h" />
+    <ClCompile Include="..\Storm3DRendering\src\EngineUniforms.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\FrameBufferObject.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\HardwareBuffer.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\ObjectRenderer.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\RenderDevice.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\Renderer.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\RenderTarget.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\Shader.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\Texture.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\Uniform.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\UniformFactory.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\UniformTypes.cpp" />
+    <ClCompile Include="..\Storm3DRendering\src\VertexStream.cpp" />
+    <ClCompile Include="external\tinyxml2.cpp" />
+    <ClCompile Include="src\FullScreenQuad.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\ObjReader.cpp" />
+    <ClCompile Include="src\FPSCamera.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
+    <ClCompile Include="src\SubMesh.cpp" />
+    <ClCompile Include="src\Timer.cpp" />
+    <ClCompile Include="src\XMLParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MaterialManager.cpp" />
+    <ClCompile Include="src\Mesh.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\StormEngine.cpp" />
+    <ClCompile Include="src\Material.cpp" />
+    <ClCompile Include="src\MeshManager.cpp" />
+    <ClCompile Include="src\Node.cpp" />
+    <ClCompile Include="src\PointLight.cpp" />
+    <ClCompile Include="src\SceneManager.cpp" />
+    <ClCompile Include="src\TextureManager.cpp" />
+    <ClCompile Include="src\MaterialParser.cpp" />
+    <ClCompile Include="src\ShaderManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Storm3DMath\Storm3DMath.vcxproj">
+      <Project>{90715e70-d22c-4f53-bce5-a4324620f220}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Storm3DModelConverter\ModelConverter.vcxproj">
+      <Project>{adb84670-2281-4fd8-b46a-7fdbea699981}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,7 @@
+<Material name="diffuse">
+	<Shader source="Engine/Shaders/diffuseShader.xml"/>
+	<ShaderFlag name="_F03_ParallaxMapping"/>
+	
+	<Sampler name="albedoMap" source="Engine/textures/Rocks/layingrock.jpg" />
+	<Sampler name="normalMap" source="Engine/Textures/Rocks/layingrockBump.tga" allowCompression="false" />
+</Material>

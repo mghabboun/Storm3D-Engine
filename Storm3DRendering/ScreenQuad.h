@@ -1,0 +1,10 @@
+#ifndef STORM3D_FULLSCREEN_SCREEN_QUAD
+#define STORM3D_FULLSCREEN_SCREEN_QUAD
+
+class ScreenQuad
+{
+
+
+};
+
+#endif

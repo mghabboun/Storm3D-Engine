@@ -1,0 +1,6 @@
+<Material name="diffuse">
+	<Shader source="E:/projects/Storm3DEngine/EngineDefaults/Shaders/diffuseShader.xml"/>
+	<ShaderFlag name=""/>
+	
+	<Sampler name="colorMap" source="" />
+</Material>

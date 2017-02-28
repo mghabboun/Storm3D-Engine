@@ -1,0 +1,10 @@
+<h3> Argument-dependent Name Lookup </h3>
+
+In C++ Using << with std::cout doesn't require calling std::<< Why? Well the C++ standard commitee did notice that it's really awkward to write down 
+
+<pre>std::cout std::<< "That's really awkward" std::<< ""; </pre>
+
+which is the reason they introduced argument-dependent name lookup, quoting directly from the standard <q>
+When the postfix-expression in a function call (5.2.2) is an unqualified-id, other namespaces not considered during the usual unqualified lookup (3.4.1) may be searched, and in those namespaces, namespace-scope friend function declarations (11.3) not otherwise visible may be found.</q>
+
+In other words when the compiler fails to lookup a name, it will search other invisible namespaces that are present in the expression.

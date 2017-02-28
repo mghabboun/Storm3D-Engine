@@ -1,0 +1,50 @@
+<Shader name="diffuseWithoutTexture">
+<VertexShader>
+#version 330
+
+uniform mat4 viewMatrix, projMatrix;
+uniform mat3 normalMatrix;
+ 
+uniform vec3 lightPos;
+uniform vec4 lightColor;
+ 
+in vec3 Position;
+in vec3 Normal;
+in vec2 TexCoord1;
+ 
+smooth out vec3 varyingNormal;
+smooth out vec2 varyingTexCoord1;
+smooth out vec3 outlightDir;
+ 
+void main()
+{	
+	varyingTexCoord1 = TexCoord1;
+	varyingNormal = normalMatrix * Normal;
+	vec4 posInEye = viewMatrix * vec4(Position,1);
+	//outlightDir = normalize( normalMatrix * ( vec3(lightPos) - Position));
+	outlightDir = vec3(lightPos -  vec3(posInEye) );	
+    gl_Position = projMatrix * viewMatrix * vec4(Position,1);
+}
+</VertexShader>
+
+<FragmentShader>
+#version 330
+
+out vec4 outputF;
+
+//uniform vec3 baseColor;
+uniform sampler2D colorMap;
+
+smooth in vec3 varyingNormal;
+smooth in vec2 varyingTexCoord1;
+
+smooth in vec3 outlightDir;
+
+void main(void)
+{
+	// Dot product gives us diffuse intensity
+	float diff = clamp(dot(normalize(varyingNormal), normalize( outlightDir ) ), 0.0, 1.0 );
+	outputF =  vec4(diff);
+}
+</FragmentShader>
+</Shader>

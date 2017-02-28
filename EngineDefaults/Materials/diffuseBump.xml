@@ -1,0 +1,7 @@
+<Material name="diffuseBump">
+	<Shader source="E:/projects/Storm3DEngine/EngineDefaults/Shaders/diffuseShader.xml"/>
+	<ShaderFlag name="_F03_ParallaxMapping"/>
+	
+	<Sampler name="albedoMap" source="E:/projects/Storm3DEngine/EngineDefaults/Textures/Rocks/layingrock.jpg" />
+	<Sampler name="normalMap" source="E:/projects/Storm3DEngine/EngineDefaults/Textures/mur_NormalMap.bmp" allowCompression="false" />
+</Material>
